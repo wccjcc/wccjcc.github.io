@@ -19,7 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <div className="star-field" aria-hidden="true" />
+        <ThemeProvider>
+          <div className="page-content">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   )

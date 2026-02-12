@@ -1,8 +1,25 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Mail, Github, Linkedin, Dribbble } from "lucide-react"
+import { Mail, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+function VelogIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M7 7.5l5 11 5-11" />
+    </svg>
+  )
+}
 
 export function ConnectSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -32,9 +49,9 @@ export function ConnectSection() {
           <div
             className={`space-y-4 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-balance">Let's Connect</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-balance">Contact</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              
             </p>
           </div>
 
@@ -42,42 +59,45 @@ export function ConnectSection() {
             className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
             <Button size="lg" className="gap-2" asChild>
-              <a href="mailto:hello@example.com">
+              <a href="goqkfkrltl12@naver.com">
                 <Mail className="w-4 h-4" />
-                Get in Touch
+                goqkfkrltl12@naver.com
               </a>
             </Button>
           </div>
 
           <div
-            className={`flex items-center justify-center gap-4 pt-8 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+            className={`flex flex-wrap items-center justify-center gap-8 pt-8 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           >
             <a
-              href="https://dribbble.com"
+              href="https://velog.io/@farishta/posts"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 hover:bg-muted rounded-lg transition-colors"
-              aria-label="Dribbble"
+              className="flex flex-col items-center gap-2 p-3 hover:bg-muted rounded-lg transition-colors"
+              aria-label="Velog"
             >
-              <Dribbble className="w-5 h-5" />
+              <VelogIcon className="w-7 h-7" />
+              <span className="text-xs uppercase tracking-wider text-muted-foreground">Velog</span>
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/woojoo-jung-3409913ab"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 hover:bg-muted rounded-lg transition-colors"
+              className="flex flex-col items-center gap-2 p-3 hover:bg-muted rounded-lg transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-7 h-7" />
+              <span className="text-xs uppercase tracking-wider text-muted-foreground">LinkedIn</span>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/wccjcc"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 hover:bg-muted rounded-lg transition-colors"
+              className="flex flex-col items-center gap-2 p-3 hover:bg-muted rounded-lg transition-colors"
               aria-label="GitHub"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-7 h-7" />
+              <span className="text-xs uppercase tracking-wider text-muted-foreground">GitHub</span>
             </a>
           </div>
         </div>

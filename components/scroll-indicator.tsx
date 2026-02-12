@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react"
 
 const sections = [
-  { id: "hero", label: "Home" },
   { id: "about", label: "About" },
+  { id: "skills", label: "Skills" },
   { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "connect", label: "Connect" },
+  { id: "connect", label: "Contact" },
 ]
 
 export function ScrollIndicator() {
@@ -53,11 +53,14 @@ export function ScrollIndicator() {
             className="group relative flex items-center"
             aria-label={`Go to ${label}`}
           >
+            <span className="pointer-events-none absolute left-3 whitespace-nowrap text-sm font-semibold text-foreground opacity-0 transition-all duration-200 group-hover:opacity-100">
+              {label}
+            </span>
             <div
-              className={`w-0.5 transition-all duration-300 rounded-full ${
+              className={`w-1 transition-all duration-300 rounded-full ${
                 activeSection === id
                   ? "h-12 bg-foreground"
-                  : "h-8 bg-foreground/30 group-hover:h-10 group-hover:bg-foreground/50"
+                  : "h-8 bg-foreground/30 group-hover:h-10 group-hover:bg-foreground"
               }`}
             />
           </button>

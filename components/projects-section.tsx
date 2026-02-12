@@ -50,7 +50,7 @@ export function ProjectsSection() {
     <section id="projects" className="py-32 px-6 lg:px-8" ref={sectionRef}>
       <div className="max-w-6xl mx-auto">
         <h2
-          className={`text-sm uppercase tracking-wider text-muted-foreground mb-16 transition-all duration-700 text-center md:text-left ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`text-3xl md:text-4xl font-bold tracking-tight mb-12 transition-all duration-700 text-center md:text-left ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
           Selected Work
         </h2>

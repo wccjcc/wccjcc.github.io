@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import { useEffect, useRef, useState } from "react"
 
@@ -8,24 +8,16 @@ export function ExperienceSection() {
 
   const experiences = [
     {
-      title: "Lead Designer",
-      company: "Google",
-      period: "2022 - Present",
+      title: "삼성청년SW.AI아카데미 14기",
+      company: "교육 과정",
+      period: "2025.07 - 현재",
+      description: "Java 전공 과정에서 알고리즘 학습 및 팀 프로젝트를 진행중",
     },
     {
-      title: "Senior Product Designer",
-      company: "Stripe",
-      period: "2020 - 2022",
-    },
-    {
-      title: "Product Designer",
-      company: "Airbnb",
-      period: "2018 - 2020",
-    },
-    {
-      title: "UI/UX Designer",
-      company: "Dropbox",
-      period: "2016 - 2018",
+      title: "한국 마이크로의료로봇 연구원(KIMIRo)",
+      company: "인턴",
+      period: "2024.06 - 2024.07",
+      description: "경로알고리즘 개발 및 딥러닝 학습",
     },
   ]
 
@@ -50,9 +42,9 @@ export function ExperienceSection() {
     <section id="experience" className="py-32 px-6 lg:px-8 bg-muted" ref={sectionRef}>
       <div className="max-w-6xl mx-auto">
         <h2
-          className={`text-sm uppercase tracking-wider text-muted-foreground mb-16 transition-all duration-700 text-center md:text-left ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
+          className={`text-3xl md:text-4xl font-bold tracking-tight mb-12 transition-all duration-700 text-center md:text-left ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          My Experience
+          Experience
         </h2>
 
         <div className="relative max-w-2xl mx-auto">
@@ -72,6 +64,7 @@ export function ExperienceSection() {
                   <p className="text-muted-foreground">
                     {exp.company} | {exp.period}
                   </p>
+                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{exp.description}</p>
                 </div>
               </div>
             ))}
